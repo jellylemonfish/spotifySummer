@@ -1,0 +1,14 @@
+# pixi environments
+.pixi
+
+# Ignore large data files
+data/
+*.pickle
+*.csv
+spring/
+
+# Environment and cache
+venv/
+*.sif
+*.log
+*.tmp
