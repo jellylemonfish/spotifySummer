@@ -1,10 +1,15 @@
 [workspace]
-authors = ["jellylemonfish <szhu287@wisc.edu>"]
-channels = ["conda-forge"]
-name = "stat405group4"
+authors = ["Shien Zhu <szhu287@wisc.edu>", "Dylan Maray <dylanmaray@gmail.com>"]
+channels = ["nvidia", "pytorch", "conda-forge"]  # channel order
+name = "spotify-summer"
 platforms = ["win-64"]
 version = "0.1.0"
 
 [tasks]
 
 [dependencies]
+python = "3.11"
+pytorch = "*"
+torchvision = "*"
+torchaudio = "*"
+pytorch-cuda = "11.8"

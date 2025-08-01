@@ -1,5 +1,5 @@
 # pixi environments
-.pixi
+.pixi/
 
 # Ignore large data files
 data/
@@ -12,3 +12,7 @@ venv/
 *.sif
 *.log
 *.tmp
+
+# python cache
+__pycache__/
+*.py[cod]
