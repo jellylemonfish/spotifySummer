@@ -3,6 +3,7 @@
 
 # Ignore large data files
 data/
+spotify_data/
 *.pickle
 *.csv
 spring/
