@@ -76,4 +76,5 @@ def keep_minfreq(x):
 main_data['artists_genres'] = main_data['artists_genres'].apply(keep_minfreq)
 
 main_data.to_csv(CLEAN_CSV, index=False)
+# remember to add pyarrow package here
 main_data.to_parquet(CLEAN_PARQUET, index=False)

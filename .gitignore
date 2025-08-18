@@ -1,5 +1,7 @@
-# pixi environments
+# environments
 .pixi/
+.vscode/*
+!.vscode/launch.json
 
 # Ignore large data files
 data/

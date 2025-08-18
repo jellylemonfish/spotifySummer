@@ -18,10 +18,10 @@ VAL_SIZE = 0.1
 RANDOM_STATE = 42
 
 # output paths
-CLEAN_CSV = DATA_DIR / f"filter_min{MIN_FREQ}.csv"
-CLEAN_PARQUET = DATA_DIR / f"filter_min{MIN_FREQ}.parquet"
+SPLIT_DIR = DATA_DIR / f"split_min{MIN_FREQ}"
+CLEAN_CSV = SPLIT_DIR / f"filter_min{MIN_FREQ}.csv"
+CLEAN_PARQUET = SPLIT_DIR / f"filter_min{MIN_FREQ}.parquet"
 # VAL_CSV = DATA_DIR / f"filter_min{MIN_FREQ}_val.parquet"
 # TEST_CSV = DATA_DIR / f"filter_min{MIN_FREQ}_test.parquet"
-LABEL_ENCODER = DATA_DIR / 'label_encoder.joblib' #save multi-label binarizer
-SPLIT_DIR = DATA_DIR / f"split_min{MIN_FREQ}"
+LABEL_ENCODER = SPLIT_DIR / 'label_encoder.joblib' #save multi-label binarizer
 SPLIT_DIR.mkdir(parents=True, exist_ok=True)
