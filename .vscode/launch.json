@@ -9,6 +9,16 @@
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
             "justMyCode": true
+        },
+        
+        {
+            "name": "Run split(pixi)",
+            "type": "python",
+            "request": "launch",
+            "module" : "src.dataloader.split",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+        "justMyCode": false
         }
     ]
 }

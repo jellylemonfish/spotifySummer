@@ -8,5 +8,5 @@ from pathlib import Path
 def load_genres_list(file_path: Path):
     with open(file_path, 'r', encoding='utf-8') as f:
         # Read lines and strip whitespace, one label one line
-        genres = [ln.strip() for ln in f.readlines() if ln.strip()]
+        genres = [ln.strip().lower() for ln in f.readlines() if ln.strip()]
     return sorted(set(genres))

@@ -66,13 +66,21 @@ min_freq = 50 # adjust: 20 30 50 100
 genre_keep = {g for g, c in genre_count.items() if c >= min_freq}
 # print(f"\n We have {len(genre_count)} unique genres. After filtering for those asppering at least {min_freq} times, only {len(genre_keep)} remain.")
 def keep_minfreq(x):
+    if x is None or (isinstance(x, float) and np.isnan(x)):
+        return []
+    if isinstance(x, np.ndarray):
+        x = x.tolist()
     if not isinstance(x, list):
-        return np.nan
-    kept = [g for g in x if g in genre_keep]
-    return kept if kept else np.nan
+        return [] if pd.isna(x) else [str(x)]
+    return [str(t) for t in x if str(t).strip()]
 
+    # if x is None:
+    #     return np.nan
+    # if not isinstance(x, list):
+    #     return np.nan
+    # kept = [g for g in x if g in genre_keep]
+    # return kept if kept else np.nan
 
-# drop NaN, or mark unkown (need to discuss, and finish)
 main_data['artists_genres'] = main_data['artists_genres'].apply(keep_minfreq)
 
 main_data.to_csv(CLEAN_CSV, index=False)
